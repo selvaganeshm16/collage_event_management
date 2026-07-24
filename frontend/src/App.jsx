@@ -1,8 +1,17 @@
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "@/config/routes";
+import { ThemeProvider } from "@/context/ThemeContext";
+import "@/styles/index.css";
 
 function App() {
   return (
-    <h1>Hello Collage Event Management</h1>
-  )
+    <ThemeProvider>
+      <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;
